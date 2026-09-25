@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>New Jersey | Bon Jovi Tributeband</title><meta name="description" content="New Jersey is een Bon Jovi Tributeband uit Midden-Nederland. Vijf ervaren muzikanten, grote songs, stevige rock en een liveshow die publiek en band samenbrengt."><meta name="theme-color" content="#050505"><style>
+<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>New Jersey | Bon Jovi Tributeband</title><meta name="description" content="New Jersey is een Bon Jovi Tributeband. Vijf ervaren muzikanten, grote songs, stevige rock en een liveshow die publiek en band samenbrengt."><meta name="theme-color" content="#050505"><style>
 :root{
   --bg:#050505;
   --bg2:#0b0a09;
@@ -44,7 +44,9 @@ p{margin:0;color:#d6d0c8}
 .btn-solid{background:var(--gold);color:#090909}
 header{
   position:fixed;z-index:100;left:0;right:0;top:0;
-  background:linear-gradient(#040404f4,#040404c7,transparent);
+  background:#050505;
+  border-bottom:1px solid rgba(255,255,255,.10);
+  box-shadow:0 8px 26px rgba(0,0,0,.32);
 }
 .nav{height:84px;display:flex;align-items:center;justify-content:space-between;gap:28px}
 .brand{display:flex;align-items:center;gap:14px}
@@ -68,8 +70,7 @@ nav a:hover{color:var(--gold2)}
     linear-gradient(90deg,rgba(3,3,3,.76) 0%,rgba(3,3,3,.38) 31%,rgba(3,3,3,.03) 60%,rgba(3,3,3,.06) 100%),
     linear-gradient(0deg,rgba(3,3,3,.82) 0%,transparent 41%,rgba(3,3,3,.05) 78%);
 }
-.hero-inner{position:relative;z-index:2;padding:150px 0 88px;max-width:var(--max)}
-.hero-mark{width:88px;height:126px;object-fit:cover;object-position:center;margin-bottom:24px;border:1px solid rgba(215,169,46,.35)}
+.hero-inner{position:relative;z-index:2;padding:150px 0 82px;max-width:var(--max)}
 .hero h1 span{display:block;color:var(--gold2)}
 .hero-sub{max-width:680px;margin-top:19px;font-size:18px;color:#eee7db}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;position:relative;z-index:4;padding-bottom:4px}
@@ -131,6 +132,20 @@ section{position:relative}
 .song b{font-family:var(--display);font-size:23px;font-weight:700}
 .song span{font-size:10px;letter-spacing:.13em;color:var(--gold2);text-transform:uppercase}
 
+/* Promo video */
+.promo{padding:108px 0 116px;background:
+  radial-gradient(circle at 86% 20%,rgba(140,17,21,.16),transparent 26rem),
+  linear-gradient(180deg,#0b0b0b,#050505);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  scroll-margin-top:84px}
+.promo-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:58px;align-items:center}
+.promo-copy h2{margin:12px 0 24px;max-width:520px}
+.promo-copy p{font-size:18px;max-width:500px}
+.promo-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.promo-frame{position:relative;aspect-ratio:16/9;background:#000;border:1px solid rgba(215,169,46,.38);box-shadow:0 24px 70px rgba(0,0,0,.44);overflow:hidden}
+.promo-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.promo-note{margin-top:12px;color:#8f8980;font-size:11px;letter-spacing:.035em}
+
 .spotify{padding:110px 0;background:linear-gradient(180deg,#0b0b0b,#050505);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .spotify-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:center}
 .spotify-copy h2{margin:12px 0 22px}
@@ -174,7 +189,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 36px;color:#9f9991}
 
 @media(max-width:980px){
   nav a:not(.nav-cta){display:none}
-  .intro-grid,.feature-grid,.songs-grid,.spotify-grid,.booking-grid{grid-template-columns:1fr}
+  .intro-grid,.feature-grid,.songs-grid,.promo-grid,.spotify-grid,.booking-grid{grid-template-columns:1fr}
   .feature-photo,.feature-copy{min-height:620px}
   .fourdays-head{grid-template-columns:1fr;gap:24px}.fourdays-head p{justify-self:start}
   .fourdays-grid{grid-template-columns:1fr}.fourdays-grid figure{height:390px}
@@ -189,8 +204,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 36px;color:#9f9991}
   .hero{min-height:760px}.hero-bg{background-position:67% center;transform:scale(1.015) translateX(0);transform-origin:center center}
   .hero-bg:after{background:linear-gradient(0deg,rgba(3,3,3,.96),rgba(3,3,3,.18) 66%)}
   .hero-inner{padding-bottom:58px}
-  .hero-mark{width:70px;height:102px}
-  .intro,.members,.gallery,.booking,.spotify{padding-top:82px;padding-bottom:82px}
+    .intro,.members,.gallery,.booking,.promo,.spotify{padding-top:82px;padding-bottom:82px}
   .intro-grid{gap:35px}
   .feature{padding-bottom:82px}.feature-copy{padding:44px 28px;min-height:560px}.feature-photo{min-height:610px}
   .blue-stripe{min-height:620px}.blue-copy{left:20px;right:20px}
@@ -278,26 +292,39 @@ footer{border-top:1px solid var(--line);padding:28px 0 36px;color:#9f9991}
 }
 </style></head><body><header>
 <div class="wrap nav">
-<a class="brand" href="#home">
+<a class="brand" href="index.html#home" aria-label="New Jersey – naar home">
 <img alt="New Jersey logo" src="assets/img_01_beb912eb81bd.jpg"/>
 <div class="brand-copy"><b>NEW JERSEY</b><small>Bon Jovi Tributeband</small></div>
 </a>
-<nav><a href="index.html#bandleden">Bandleden</a><a href="band.html">De band</a><a href="index.html#live">Live</a><a href="index.html#playlist">Playlist</a><a href="fotos.html">Foto's</a><a href="https://www.facebook.com/BonJoviTribute/" rel="noopener" target="_blank">Facebook</a><a class="nav-cta" href="https://showbird.com/nl/acts/27309-new-jersey-a-bon-jovi-tribute" rel="noopener" target="_blank">Boek de band</a></nav>
+<nav><a href="index.html#bandleden">Bandleden</a><a href="band.html">De band</a><a href="index.html#video">Video</a><a href="index.html#live">Live</a><a href="index.html#playlist">Playlist</a><a href="fotos.html">Foto's</a><a href="https://www.facebook.com/BonJoviTribute/" rel="noopener" target="_blank">Facebook</a><a class="nav-cta" href="https://showbird.com/nl/acts/27309-new-jersey-a-bon-jovi-tribute" rel="noopener" target="_blank">Boek de band</a></nav>
 </div>
 </header><section class="hero" id="home">
 <div class="hero-bg"></div>
 <div class="wrap hero-inner">
-<img alt="New Jersey Bon Jovi Tributeband" class="hero-mark" src="assets/img_01_beb912eb81bd.jpg"/>
-<div class="eyebrow">Bon Jovi Tributeband · Midden-Nederland</div>
+<div class="eyebrow">Bon Jovi Tributeband</div>
 <h1>NEW <span>JERSEY</span></h1>
 <p class="hero-sub">De songs die iedereen kent. De riffs, de samenzang, de powerballads en de refreinen die een zaal vanzelf terugzingt. New Jersey brengt Bon Jovi als liveband: stevig, herkenbaar en gemaakt voor het podium.</p>
 <div class="hero-actions">
-<a class="btn btn-solid" href="#live">Bekijk de liveshow</a>
+<a class="btn btn-solid" href="#video">Bekijk de promo</a>
 <a class="btn" href="https://showbird.com/nl/acts/27309-new-jersey-a-bon-jovi-tribute" rel="noopener" target="_blank">Boek New Jersey</a>
 </div>
 <div class="hero-kicker">The music. The energy. The Bon Jovi experience.</div>
 </div>
 </section><section class="home-teaser"><div class="wrap home-teaser-grid"><div class="home-teaser-photo"><img src="assets/img_02_5e2fcf76b545.jpg" alt="New Jersey live als complete band"></div><div class="home-teaser-copy"><div class="eyebrow">De band</div><h2>Vijf muzikanten. Eén livesound.</h2><p>New Jersey ontstond uit een gedeelde liefde voor de songs van Bon Jovi. Geen verkleedpartij, maar vijf ervaren muzikanten die de grote rockers, powerballads en publieksfavorieten spelen als een stevige liveband van nu.</p><a class="btn" href="band.html">Meer over de band</a></div></div></section>
+<section class="promo" id="video">
+<div class="wrap promo-grid">
+<div class="promo-copy">
+<div class="eyebrow">New Jersey · live</div>
+<h2>Bekijk de promo.</h2>
+<p>De songs, de band en de energie van een New Jersey-show. Bekijk de promo en krijg in een paar minuten het beste beeld van wat er op het podium gebeurt.</p>
+<div class="promo-actions"><a class="btn" href="https://youtu.be/-YyioU1KycM" rel="noopener" target="_blank">Bekijk op YouTube</a></div>
+<p class="promo-note">De video wordt afgespeeld via YouTube.</p>
+</div>
+<div class="promo-frame">
+<iframe src="https://www.youtube-nocookie.com/embed/-YyioU1KycM?rel=0" title="New Jersey Bon Jovi Tributeband – promo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</div>
+</section>
 <section class="members" id="bandleden"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Bandleden</div><h2>De mensen achter New Jersey.</h2></div><div class="section-head-actions"><p>Vijf muzikanten met ieder een eigen plek in het geluid — en samen één band op het podium.</p><a class="btn" href="band.html">Bekijk de bandpagina</a></div></div><div class="member-grid">
 <a class="member m-richard" href="band.html#richard"><img src="assets/img_08_cc60a770616c.jpg" alt="Richard – zang"><div class="member-copy"><h3>Richard</h3><span>Zang</span><p>De stem en het directe contact met het publiek.</p></div></a>
 <a class="member m-rob" href="band.html#rob"><img src="assets/img_05_c73a1a90f234.jpg" alt="Rob – gitaar"><div class="member-copy"><h3>Rob</h3><span>Gitaar</span><p>Riffs, hooks en het gitaarwerk dat de songs hun rand geeft.</p></div></a>
@@ -334,7 +361,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 36px;color:#9f9991}
 <div class="song"><b>You Give Love a Bad Name</b><span>Classic</span></div>
 <div class="song"><b>Wanted Dead or Alive</b><span>Acoustic / Rock</span></div>
 <div class="song"><b>Keep the Faith</b><span>Groove</span></div>
-<div class="song"><b>Always</b><span>Powerballad</span></div>
+
 <div class="song"><b>It’s My Life</b><span>2000s</span></div>
 <div class="song"><b>One Wild Night · Lay Your Hands on Me · Dry County · I’d Die for You</b><span>And more</span></div>
 </div>
@@ -357,7 +384,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 36px;color:#9f9991}
 <h2>De show stopt niet bij de podiumrand.</h2>
 <p>Bon Jovi werkt pas echt als een zaal het refrein teruggeeft. Daarom hoort het publiek in deze site net zo goed bij het verhaal als de band zelf. Meezingen, filmen, lachen, dansen: dát is de maatstaf voor een avond New Jersey.</p>
 </div>
-</section><section class="photo-teaser"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Foto's</div><h2>Dit is New Jersey live.</h2></div><p>Podiumlicht, samenspel en publiek. Bekijk meer beelden van de band op verschillende podia.</p></div><div class="photo-teaser-grid"><div class="big"><img src="assets/img_14_b54abd8ac71b.jpg" alt="New Jersey live onder geel en rood podiumlicht"></div><div class="stack"><div><img src="assets/img_10_0a07c1a2f38c.jpg" alt="New Jersey live onder blauwe podiumlichten"></div><div><img src="assets/img_09_edf7d7932c8a.jpg" alt="Publiek bij New Jersey"></div></div></div><a class="btn" href="fotos.html">Bekijk alle foto's</a></div></section><section class="booking" id="boeken">
+</section><section class="photo-teaser"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Foto's</div><h2>Dit is New Jersey live.</h2></div><p>Podiumlicht, samenspel en publiek. Bekijk meer beelden van de band op verschillende podia.</p></div><div class="photo-teaser-grid"><div class="big"><img src="assets/img_14_b54abd8ac71b.jpg" alt="New Jersey live onder geel en rood podiumlicht"></div><div class="stack"><div><img src="assets/img_10_0a07c1a2f38c.jpg" alt="New Jersey live onder blauwe podiumlichten"></div><div><img src="assets/img_15_8b2c72755e52.jpg" alt="Publiek zingt mee met New Jersey"></div></div></div><a class="btn" href="fotos.html">Bekijk alle foto's</a></div></section><section class="booking" id="boeken">
 <div class="wrap booking-grid">
 <div>
 <div class="eyebrow">Put New Jersey on your stage</div>
@@ -368,7 +395,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 36px;color:#9f9991}
 <div class="contact-card">
 <div class="contact-row"><label>Telefoon</label><a href="tel:+31612094654">06 1209 4654</a></div>
 <div class="contact-row"><label>E-mail</label><a href="mailto:newjerseybjt@gmail.com">newjerseybjt@gmail.com</a></div>
-<div class="contact-row"><label>Band</label><span>New Jersey · Bon Jovi Tributeband · Midden-Nederland</span></div>
+<div class="contact-row"><label>Band</label><span>New Jersey · Bon Jovi Tributeband</span></div>
 <div class="contact-row"><label>Boeken</label><a href="https://showbird.com/nl/acts/27309-new-jersey-a-bon-jovi-tribute" rel="noopener" target="_blank">Bekijk New Jersey op ShowBird</a></div>
 </div>
 </div>
